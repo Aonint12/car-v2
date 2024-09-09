@@ -1,0 +1,202 @@
+<style>
+  body {
+    font-family: 'Sarabun', sans-serif;
+    font-size: 16px;
+  }
+  
+  .container {
+    max-width: 960px;
+  }
+  
+  #loginForm, #addForm {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  #userInfo {
+    margin-bottom: 20px;
+    font-weight: bold;
+  }
+  
+  .btn-sm {
+    margin-right: 5px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  /* CSS สำหรับตารางที่ตอบสนอง */
+  @media screen and (max-width: 767px) {
+    #dataTable, 
+    #dataTable thead, 
+    #dataTable tbody, 
+    #dataTable th, 
+    #dataTable td, 
+    #dataTable tr {
+      display: block;
+    }
+
+    #dataTable thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+
+    #dataTable tr {
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+    }
+
+    #dataTable td {
+      border: none;
+      position: relative;
+      padding-left: 50%;
+    }
+
+    #dataTable td:before {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      content: attr(data-title);
+      font-weight: bold;
+    }
+
+    #loginForm, #addForm {
+      width: 100%;
+      max-width: none;
+    }
+
+    .btn, input[type="text"], input[type="password"], input[type="number"] {
+      padding: 10px;
+      font-size: 16px;
+    }
+  }
+  .login-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    background-color: #f8f9fa;
+  }
+  .login-logo {
+    width: 150px;
+    margin-bottom: 20px;
+  }
+  .btn-logout {
+    background-color: #CC33FF;
+    border-color: #CC33FF;
+  }
+  .btn-logout:hover {
+    background-color: #B300E6;
+    border-color: #B300E6;
+  }
+  .user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  .user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-left: 10px;
+  }
+
+  /* สไตล์สำหรับป็อปอัพโมดัล */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+  }
+
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+  }
+
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .alert {
+    max-width: 300px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  @media screen and (max-width: 767px) {
+  .mobile-card {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+
+  .mobile-card div {
+    margin-bottom: 10px;
+  }
+
+  .mobile-card label {
+    font-weight: bold;
+    display: inline-block;
+    width: 120px;
+  }
+
+  .mobile-card .value {
+    font-size: 1.1em;
+  }
+
+  .mobile-action-btn {
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  }
+}
+.mobile-card {
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .mobile-card label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .mobile-card .value {
+      display: block;
+      margin-bottom: 10px;
+    }
+    .mobile-action-btn {
+      width: 100%;
+    }
+    #searchBox {
+      margin-bottom: 15px;
+    }
+
+</style>
